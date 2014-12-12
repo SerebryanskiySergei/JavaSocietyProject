@@ -7,7 +7,7 @@ import Model.Enviroment.Habitat;
 /**
  * Created by serebryanskiysergei on 14-Oct-14.
  */
-public abstract class PersonPrototype {
+public abstract class PersonPrototype implements Cloneable {
 
     protected Person prototype;
     private IProfessionDecorator decorator;

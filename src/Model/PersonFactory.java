@@ -21,16 +21,21 @@ public class PersonFactory
         RandomContainer random = new RandomContainer();
         Person man = new Person(id);
         byte luck = (byte)random.next(1,6);
-        if (luck == 1)
-            man = _warriorPrototype.clone();
-        if (luck == 2)
-            man = _traderPrototype.clone();
-        if (luck == 3)
-            man = _robberPrototype.clone();
-        if (luck == 4)
-            man = _peasantPrototype.clone();
-        if (luck == 5)
-            man = _craftsmanPrototype.clone();
+        try {
+            if (luck == 1)
+                man = _warriorPrototype.clone();
+            if (luck == 2)
+                man = _traderPrototype.clone();
+            if (luck == 3)
+                man = _robberPrototype.clone();
+            if (luck == 4)
+                man = _peasantPrototype.clone();
+            if (luck == 5)
+                man = _craftsmanPrototype.clone();
+        }
+        catch (CloneNotSupportedException e){
+            man = new Person(luck);
+        }
         man.setId(id++);
         return man;
     }

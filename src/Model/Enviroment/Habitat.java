@@ -13,6 +13,7 @@ import java.util.Hashtable;
  * Среда обитания.
  */
 public class Habitat {
+
     private Hashtable <Integer,Profession> settlersProfessions;
     private Hashtable<Point,Integer> locationsOfSettlers;
     public TraderPlace[] MarketPlace = new TraderPlace[10];
@@ -44,7 +45,7 @@ public class Habitat {
         while(enumKey.hasMoreElements()) {
             Integer key = enumKey.nextElement();
             Person person = settlers.get(key);
-            if (getLocationsOfSettlers().containsKey(person.getLocation()))
+            if (!getLocationsOfSettlers().isEmpty()&& getLocationsOfSettlers().containsKey(person.getLocation()))
                 getLocationsOfSettlers().remove(person.getLocation());
             getLocationsOfSettlers().put(person.getLocation(), person.getId());
         }

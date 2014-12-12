@@ -17,7 +17,7 @@ public class Working extends Decision {
         else
         {
             person.setStatus(PersonState.Working);
-            person.addInBag((int) ((7 + (int)(Math.random() * ((15 - 7) + 1))) + (person.getLvlBonus() * 2)));
+            person.addInBag((7 + (int)(Math.random() * ((15 - 7) + 1))) + (person.getLvlBonus() * 2));
         }
     }
 }

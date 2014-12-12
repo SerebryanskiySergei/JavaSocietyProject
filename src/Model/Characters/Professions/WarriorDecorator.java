@@ -2,6 +2,7 @@ package Model.Characters.Professions;
 
 import Model.Characters.Person;
 import Model.Characters.Profession;
+import Model.Characters.Strategies.WarriorStrategy;
 import Model.Enviroment.Equipment;
 import Model.Enviroment.Habitat;
 

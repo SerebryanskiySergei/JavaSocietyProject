@@ -15,7 +15,6 @@ public class Kingdom
     private Hashtable<Integer, Person> settlers = new Hashtable<Integer, Person>();
     public Kingdom(int countOfSettlers, int drawAreaWidht, int drawAreaHeight)
     {
-
         _settlement = new Habitat(settlers, drawAreaWidht, drawAreaHeight);
         PersonFactory factory = new PersonFactory(_settlement);
         for (int i = 0; i <= countOfSettlers; i++)

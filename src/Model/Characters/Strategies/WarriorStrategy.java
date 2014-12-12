@@ -24,7 +24,7 @@ public class WarriorStrategy implements IStrategy {
         if (inDangerous(person) && person.getStatus()!=PersonState.Fighting)
         {
             person.changeStrategy(new SafeStrategy());
-            person.setDecision(person.getStrategy().takeDecision((IPersonToStrategy) person, pEnvir, settlement));
+            person.setDecision(person.getStrategy().takeDecision(person, pEnvir, settlement));
             return person.getLastDecision();
         }
         switch (person.getStatus())
